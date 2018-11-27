@@ -1,23 +1,51 @@
-# Quotes on Dev Starter
+# Project: QuotesOnDev Theme
+A WordPress theme called Quotes on Dev.
+## About this project
+You can see this project by following these instructions :
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+### Installation
 
-## Installation
+#### 1. Download me (don't clone me!)
 
-### 1. Download me (don't clone me!)
+Then add me to your `wp-content` directory.
 
-Then add me to your `wp-content/themes` directory.
+#### 2. Install the dev dependencies
 
-### 2. Rename the `quotesondev-starter-master` directory
+Next you'll need to run `npm install` **inside your theme directory** next to install the node modules you'll need for Gulp, etc.
 
-Make sure that the theme directory name is project appropriate! Do you need `starter` or `master` in the directory name?
+#### 3. Update the proxy in `gulpfile.js`
 
-### 3. Install the dev dependencies
+Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so |  `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
 
-Next you'll need to run `npm install` **inside your theme directory** to install the npm packages you'll need for Gulp, etc.
+----
+## Goals of the site
+This site has been created to learn how to create a theme by using Wordpress.
 
-### 4. Update the proxy in `gulpfile.js`
+----
+## Technology used
+PHP | SASS | JavaScript ES6 | JQuery | Git | Wordpress | AJAX | Wordpress REST API |
 
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
+----
+## Wordpress features
+Create plugins | change the dashboard and the login-menu | Use Wordpress functions | REST API |
 
-And now would be a good time to `git init` :)
+----
+## Personal Learnings
+
+1. Wordpress REST API and AJAX
+2. PHP
+3. Customize Wordpress by adding personnal plugins and widgets and by changing the Dashboard 
+
+----
+## Link to the files on Github
+* **[QUOTESONDEV THEME](https://github.com/PaulPetillot/QuotesOnDev)
+
+----
+
+## Dead Line for the project
+* 28-Nov-2018
+
+----
+## Project developed by 
+ **[Paul Petillot]
+(https://github.com/PaulPetillot)**
