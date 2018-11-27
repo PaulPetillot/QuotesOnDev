@@ -4,7 +4,9 @@
     $(function () {
         $(".new-quote-button").on('click', function (event) {
             event.preventDefault();
-
+            $description = $('.description');
+            $metah2 = $('.metah2');
+            $authorName = $('.author-name');
             // fetch a new quote
             $.ajax({
                 method: 'GET',
@@ -18,10 +20,10 @@
                     the_excerpt = post.excerpt.rendered;
                 //update the quote content and name of the quoted peson
                 //maybe use appemnd
-                $('.description').html(the_excerpt);
+                $description.html(the_excerpt);
                 //$('.link-source-url').html(quoteSourceUrl)
-                $('.metah2').html('<a href="' + quoteSourceUrl + '">' + quoteSource + '</a>');
-                $('.author-name').html(the_title);
+                $metah2.html('<a href="' + quoteSourceUrl + '">' + quoteSource + '</a>');
+                $authorName.html(the_title);
                 //update the URL using history
             });
         })
@@ -31,27 +33,29 @@
 
     /* Ajax-based front-end post submissions */
     $(function () {
+        $('.submit-form').on('submit', function (event) {
+        event.preventDefault();
         // Event on submit of the form
-        const data = {
-            title: $('#update-title').val(),
-            content: $('#quote-content').val(),
-            _qod_quote_source: $('#quote-source').val(),
-            _qod_quote_source_url: $('#quote-source-url').val(),
+        let data = {
+            title: $('#author-name-field').val(),
+            content: $('#quote-content-field').val(),
+            _qod_quote_source: $('#quote-source-field').val(),
+            _qod_quote_source_url: $('#quote-url-field').val(),
             post_status: 'pending'
         };
-        $('form').on('submit', function () {
-            $ajax({
+            $.ajax({
                 method: 'POST',
                 url: api_vars.root_url + 'wp/v2/posts',
-                data,
+                data:data,
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader('X-WP-Nonce', api_vars.nonce);
                 }
 
             }).done(function () {
-                // clear the form fields and hide the form
                 //Use jquey so hide the form in a slidey way
-
+                event.preventDefault();
+                $('.submit-form').css('display', 'none');
+                $('.message-receive').append('Thanks, your quote submission was received !')
                 //show success message using the var from functions.php
 
 

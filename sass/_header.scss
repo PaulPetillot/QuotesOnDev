@@ -1,0 +1,27 @@
+//Logo
+.site-branding {
+    display: flex;
+    justify-content: left;
+    margin-top: 60px;
+    padding-left: 15px;
+
+    img {
+        height: 50px;
+        display: flex;
+    }
+
+    @include tablet {
+        img {
+            height: 100px;
+            display: flex;
+        }
+    }
+
+    @include desktop {
+        a {
+            height: 115px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+/* All Archives Page */
+
+.archives {
+    padding: 15px;
+    width: auto;
+    margin-bottom: 250px;
+
+    h1 {
+        padding: 0px;
+
+        color: white;
+        font-weight: 300;
+        font-size: 28px;
+    }
+
+    a {
+        float: left;
+
+        padding: 5px;
+        font-weight: 300;
+        color: $green;
+        text-decoration: none;
+    }
+}
+
+//Category and tag
+
+.category,
+.tag,
+.submit {
+    padding: 10px;
+    width: auto;
+    .page-title {
+        font-weight: 300;
+        color: white;
+        padding-bottom: 30px;
+        border-bottom: 1px dotted white;
+    }
+
+    .post {
+        padding-bottom: 20px;
+        border-bottom: 1px dotted white;
+    }
+
+    @include desktop {
+        @include quote;
+    }
+
+    div.entry-content::before {
+        display: none;
+    }
+
+    div.entry-content::after {
+        display: none;
+    }
+
+    .description p {
+        padding: 10px;
+        text-align: left;
+    }
+}

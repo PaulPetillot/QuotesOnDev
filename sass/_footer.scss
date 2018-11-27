@@ -1,0 +1,61 @@
+footer {
+    margin-top: 80px;
+    display: inline-flex;
+    padding-left: 10px;
+    @include desktop {
+        display: unset;
+    }
+
+    .site-info {
+
+        font-weight: 300;
+
+        @include tablet {
+            display: inline-flex;
+        }
+
+        @include desktop {
+            width: 100%;
+            flex-direction: row;
+            display: inline-flex;
+            justify-content: flex-end;
+
+
+        }
+
+        p {
+            color: white;
+            margin-left: 5px;
+
+            a {
+                color: $green;
+                text-decoration: none;
+            }
+
+            @include tablet {
+
+                margin-top: 5px;
+
+            }
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-flex;
+
+            li a {
+                color: $green;
+                text-decoration: none;
+                margin: 5px;
+                padding-right: 15px;
+                border-right: 1px solid white;
+
+                &:hover {
+                    color: $green-hover;
+                }
+            }
+        }
+    }
+}

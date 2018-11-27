@@ -1,0 +1,19 @@
+
+//Search page
+.search {
+    width: auto;
+
+    .page-header {
+        border-bottom: 1px dotted white;
+    }
+
+    a {
+        color: $green;
+        text-decoration: none;
+        font-weight: 400;
+    }
+
+    @include desktop {
+        @include quote;
+    }
+}

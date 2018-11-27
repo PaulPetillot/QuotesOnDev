@@ -14,3 +14,32 @@
       @content;
     }
   }
+@mixin quote {
+  
+    width: auto;
+    position: relative;
+
+    &:before,
+    &:after {
+        color: $green;
+        font-family: 'FontAwesome';
+        font-size: 125px;
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        line-height: 125px;
+
+    }
+
+    &:before {
+        content: '\f10d';
+        left: -160px;
+    }
+
+    &:after {
+        content: '\f10e';
+        bottom: -20;
+        right: -110px;
+    }
+
+}

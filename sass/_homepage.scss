@@ -1,0 +1,152 @@
+//Homepage
+body {
+    background-color: $color__background-screen;
+    margin: auto;
+    height: 20vh;
+    width: 100vw;
+    font-family: $font__main;
+    color: white;
+    @include tablet {
+        width: 800px;
+    }
+
+    @include desktop {
+        width: 1080px;
+    }
+
+    .nav-previous {
+        display: none;
+    }
+
+    @include desktop {
+        .site-content {
+            margin: 4.5rem 175px 1.5rem;
+            position: relative;
+        }
+    }
+
+    .entry-content {
+        .meta-content {
+            a {
+                text-decoration: none;
+                color: $green;
+            }
+
+            display: inline-flex;
+
+            @include desktop {
+                .metah2 {
+                    margin-left: 9px;
+                }
+            }
+        }
+
+        h2 {
+            color: white;
+
+            font-weight: 300;
+            font-size: 1.1rem;
+            margin-left: 5px;
+            padding-left: 10px;
+            @include desktop {
+                display: flex;
+                width: auto;
+                margin: auto;
+            }
+        }
+
+        p {
+            color: white;
+            font-weight: 300;
+            font-size: 1.2rem;
+            padding: 10px;
+        }
+
+        @include tablet {
+            p {
+                font-size: 2.25rem;
+            }
+        }
+
+        @include desktop {
+            position: relative;
+
+            p {
+                font-size: 2.25rem;
+                margin: auto;
+                width: 750px;
+            }
+
+            &:before,
+            &:after {
+                color: $green;
+                font-family: 'FontAwesome';
+                font-size: 125px;
+                position: absolute;
+                top: 0;
+                overflow: hidden;
+                line-height: 125px;
+
+            }
+
+            &:before {
+                content: '\f10d';
+                left: -190px;
+            }
+
+            &:after {
+                content: '\f10e';
+                bottom: -20;
+                right: -150px;
+            }
+        }
+    }
+
+    .new-quote-button {
+        margin-top: 20px;
+        margin-left: 10px;
+        background-color: $color__background-screen;
+        border: 2px solid $green;
+        border-radius: 5px;
+        color: $green;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1;
+        padding: .75rem 2.25rem;
+
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            color: $green-hover;
+        }
+
+        @include tablet {
+            border: 2px solid $green;
+            border-radius: 3px;
+            color: $green;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1;
+            padding: 1rem 3.25rem;
+        }
+
+        @include desktop {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+        }
+    }
+//Pagination
+    .number-pagination {
+        padding: 15px;
+        a {
+            margin: 5px;
+            color: $green;
+            font-weight: 300;
+            text-decoration: none;
+        }
+    }
+}

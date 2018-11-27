@@ -1,0 +1,35 @@
+
+//404 page
+.error-404 {
+    padding: 20px;
+    width: auto;
+
+    @include desktop {
+        @include quote;
+    }
+
+    fieldset {
+        border: none;
+
+        input {
+            background-color: $color__background-screen;
+            font-family: $font__main;
+            border: 2px solid $green;
+
+            &:focus {
+                color: white;
+                outline: none;
+            }
+        }
+
+        .search-submit {
+            background-color: $color__background-screen;
+            border: none;
+            color: $green;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
