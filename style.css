@@ -615,35 +615,70 @@ body {
   @media (min-width: 600px) {
     body {
       width: 800px; } }
+  @media (min-width: 1240px) {
+    body {
+      width: 1080px; } }
   body .nav-previous {
     display: none; }
+  @media (min-width: 1240px) {
+    body .site-content {
+      margin: 4.5rem 175px 1.5rem;
+      position: relative; } }
+  body .entry-content .meta-content {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
+    body .entry-content .meta-content a {
+      text-decoration: none;
+      color: #0c0; }
+    @media (min-width: 1240px) {
+      body .entry-content .meta-content .metah2 {
+        margin-left: 9px; } }
   body .entry-content h2 {
     color: white;
     font-family: 'Exo';
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-left: 5px; }
     @media (min-width: 1240px) {
       body .entry-content h2 {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        margin-left: 130px; } }
+        width: auto;
+        margin: auto; } }
   body .entry-content p {
     color: white;
     font-family: 'Exo';
     font-weight: 300;
     font-style: normal;
-    font-size: 1.25rem;
+    font-size: auto;
     margin-left: 10px; }
   @media (min-width: 600px) {
     body .entry-content p {
       font-size: 2.25rem; } }
   @media (min-width: 1240px) {
-    body .entry-content p {
-      text-align: center;
-      font-size: 2.25rem;
-      margin: auto; } }
+    body .entry-content {
+      position: relative; }
+      body .entry-content p {
+        font-size: 2.25rem;
+        margin: auto;
+        width: 800px; }
+      body .entry-content:before, body .entry-content:after {
+        color: #0c0;
+        font-family: 'FontAwesome';
+        font-size: 125px;
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        line-height: 125px; }
+      body .entry-content:before {
+        content: '\f10d';
+        left: -190px; }
+      body .entry-content:after {
+        content: '\f10e';
+        bottom: -20;
+        right: -190px; } }
   body .new-quote-button {
     margin-top: 20px;
     margin-left: 10px;
@@ -659,7 +694,7 @@ body {
     body .new-quote-button:focus {
       outline: none; }
     body .new-quote-button:hover {
-      color: #049c04; }
+      color: #03ad03; }
     @media (min-width: 600px) {
       body .new-quote-button {
         background-color: #222;
@@ -701,26 +736,38 @@ body {
       display: -ms-flexbox;
       display: flex; } }
   @media (min-width: 1240px) {
-    .site-branding img {
-      height: 120px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      margin: auto; } }
+    .site-branding a {
+      height: 115px;
+      display: block;
+      margin: 0 auto; } }
 
 footer {
-  margin-top: 80px; }
+  margin-top: 80px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+  @media (min-width: 1240px) {
+    footer {
+      display: unset; } }
   footer .site-info {
     font-family: 'Exo';
     font-weight: 300; }
     @media (min-width: 600px) {
       footer .site-info {
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
-        display: inline-flex; } }
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
     @media (min-width: 1240px) {
       footer .site-info {
         width: 100%;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         display: -webkit-inline-box;
         display: -ms-inline-flexbox;
         display: inline-flex;
@@ -737,6 +784,9 @@ footer {
         footer .site-info p {
           padding-left: 5px;
           margin: 0; } }
+      @media (min-width: 1240px) {
+        footer .site-info p {
+          margin-top: 5px; } }
     footer .site-info ul {
       list-style: none;
       margin: 0;
@@ -753,5 +803,88 @@ footer {
         footer .site-info ul li a:hover {
           color: #03ad03; }
 
+.about {
+  font-family: 'Exo'; }
+  @media (min-width: 600px) {
+    .about {
+      width: 800px; } }
+  .about .entry-title {
+    font-weight: 300;
+    margin-left: 20px;
+    color: white; }
+  .about .entry-content p {
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 16px; }
+    .about .entry-content p a {
+      text-decoration: none;
+      color: #0c0; }
+      .about .entry-content p a:hover {
+        color: #03ad03; }
+
 /* All Archives Page */
+.archives {
+  width: 800px;
+  margin-bottom: 250px; }
+  .archives h1 {
+    padding: 10px;
+    font-family: 'Exo';
+    color: white;
+    font-weight: 300;
+    font-size: 28px; }
+  .archives a {
+    float: left;
+    font-family: 'Exo';
+    padding: 5px;
+    font-weight: 300;
+    color: #0c0;
+    text-decoration: none; }
+
+.tag {
+  width: 800px; }
+  .tag .page-title {
+    font-family: 'Exo';
+    font-weight: 300;
+    color: white;
+    padding-bottom: 30px;
+    border-bottom: 1px dotted white; }
+
+.category {
+  width: 800px; }
+  .category .page-title {
+    font-family: 'Exo';
+    font-weight: 300;
+    color: white;
+    padding-bottom: 30px;
+    border-bottom: 1px dotted white; }
+  .category .post {
+    padding-bottom: 40px;
+    border-bottom: 1px dotted white; }
+  @media (min-width: 1240px) {
+    .category {
+      width: 800px;
+      position: relative; }
+      .category:before, .category:after {
+        color: #0c0;
+        font-family: 'FontAwesome';
+        font-size: 125px;
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        line-height: 125px; }
+      .category:before {
+        content: '\f10d';
+        left: -160px; }
+      .category:after {
+        content: '\f10e';
+        bottom: -20;
+        right: -160px; } }
+  .category div.entry-content::before {
+    display: none; }
+  .category div.entry-content::after {
+    display: none; }
+  .category .description p {
+    padding: 10px;
+    text-align: left; }
+
 /* Submit a Quote Page */

@@ -6,29 +6,31 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+	<div id="primary" class="archives content-area">
 		<main id="main" class="site-main" role="main">
 
-            <section>
-                    <!-- Display author single post by author with "Show me another button"-->
-                    <?php  //get_post() with posts_per_Page as arg 
-                            // foreach and setup_postdata
-                    ?>
+                <?php get_template_part( 'template-parts/content', 'page' ); ?>
+
+             <section class="authors">
+            <h1>Quote Authors</h1>
+            <?php $posts = get_posts(array('numberposts' => -1));?>
+           <?php foreach ($posts as $post) : setup_postdata( $post );?>
+            <a href="<?php  the_permalink(); ?>"><?php  the_title(); ?></a>
+                <?php endforeach; wp_reset_postdata(); ?>
+         </section>
+
+
+            <section class="category-section">
+            <h1 class="h1-title-archives">Categories</h1>
+                <!-- Display category links to show archive of posts of this category-->
+            <?php wp_tag_cloud( array('taxonomy' => 'category','smallest'=> 14, 'largest'=> 14)); ?>
             </section>
 
 
-            <section>
-                    <!-- Display category links to show archive of posts of this category-->
-                    <?php  //use Wordpress methos to list your categories (no loop)
-                    ?>
-            </section>
-
-
-            <section>
-                    <!-- Display tags links to show archive of posts of this category-->
-                    <?php  //use Wordpress methos to show a tag cloud (no loop)
-                    ?>
+            <section class="tags-section">
+            <h1 class="h1-title-archives">Tags</h1>
+             <!-- Display tags links to show archive of posts of this category-->
+            <?php wp_tag_cloud(array('smallest'=> 14, 'largest'=> 14)) ?>
             </section>
 
 

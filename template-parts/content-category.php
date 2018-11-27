@@ -1,27 +1,25 @@
 <?php
 /**
- * Template part for displaying posts.
+ * Template part for displaying page content in page.php.
  *
  * @package QOD_Starter_Theme
  */
-$source = get_post_meta( get_the_ID(), '_qod_quote_source', true );
-$source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		
+	</header><!-- .entry-header -->
 
-	<?php //get the content ?>
-	<?php 
-	//If source and source url fields are not empty then show them
-	// Else if the source only has content show the source only
-	// Else show empty span
-	?>
-	<div class="entry-content">
+
+
+    <div class="entry-content">
 		<div class="description">
 		<?php the_excerpt();?>
 		</div>
 		<div class="meta-content">
-		<h2 class="author-name"> -<?php the_title(); ?>, </h2>
+		<h2 class="author-name"> -<?php the_title(); ?> </h2>
 	<?php if ((!empty($source)) && (!empty($source_url) )) : ?>
 		<h2 class = "metah2"><a class= "link-source-url" href="<?php echo $source_url ?>"><?php echo $source ?></a></h2>
 		</div>
@@ -35,8 +33,10 @@ $source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
 		
 	</div>
 	<?php endif ?>
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+				'after'  => '</div>',
+			) );
+		?>
 </article><!-- #post-## -->
-
-	<? // if is_home or is_single?>
-		<button class="new-quote-button">Show me another !</button>
-	<?php //endif ?>

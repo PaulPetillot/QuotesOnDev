@@ -12,22 +12,46 @@ body {
     @include tablet {
         width: 800px;
     }
+    @include desktop{
+        width: 1080px;
+    }
 
     .nav-previous {
         display: none;
     }
-
+    @include desktop{
+        .site-content{
+            margin: 4.5rem 175px 1.5rem;
+            position: relative;
+        }
+    }
     .entry-content {
+        .meta-content {
+            a {
+                text-decoration: none;
+                color: $green;
+            }
+
+            display: inline-flex;
+
+            @include desktop {
+                .metah2 {
+                    margin-left: 9px;
+                }
+            }
+        }
+
         h2 {
             color: white;
             font-family: 'Exo';
             font-weight: 300;
-            font-size: 1rem;
+            font-size: 1.2rem;
             margin-left: 5px;
 
             @include desktop {
                 display: flex;
-                margin-left: 130px;
+                width: auto;
+                margin: auto;
             }
         }
 
@@ -36,7 +60,7 @@ body {
             font-family: 'Exo';
             font-weight: 300;
             font-style: normal;
-            font-size: 1.25rem;
+            font-size: auto;
             margin-left: 10px;
         }
 
@@ -47,10 +71,34 @@ body {
         }
 
         @include desktop {
+            position: relative;
             p {
-                text-align: center;
                 font-size: 2.25rem;
                 margin: auto;
+                width: 800px;
+            }
+
+            &:before,
+            &:after {
+                color: $green;
+                font-family: 'FontAwesome';
+                font-size: 125px;
+                position: absolute;
+                top: 0;
+                overflow: hidden;
+                line-height: 125px;
+
+            }
+
+            &:before {
+                content: '\f10d';
+                left: -190px;
+            }
+
+            &:after {
+                content: '\f10e';
+                bottom: -20;
+                right: -190px;
             }
         }
     }
@@ -59,9 +107,9 @@ body {
         margin-top: 20px;
         margin-left: 10px;
         background-color: #222222;
-        border: 2px solid #0c0;
+        border: 2px solid $green;
         border-radius: 3px;
-        color: #0c0;
+        color: $green;
         font-size: 1rem;
         font-weight: 700;
         line-height: 1;
@@ -73,14 +121,14 @@ body {
         }
 
         &:hover {
-            color: rgb(4, 156, 4);
+            color: $green-hover;
         }
 
         @include tablet {
             background-color: #222;
-            border: 2px solid #0c0;
+            border: 2px solid $green;
             border-radius: 3px;
-            color: #0c0;
+            color: $green;
             font-size: 1.5rem;
             font-weight: 700;
             line-height: 1;
@@ -114,27 +162,32 @@ body {
     }
 
     @include desktop {
-        img {
-            height: 120px;
-            display: flex;
-            margin: auto;
+        a {
+            height: 115px;
+            display: block;
+            margin: 0 auto;
         }
     }
 }
 
 footer {
     margin-top: 80px;
-
+   display: inline-flex;
+   @include desktop{
+       display: unset;
+   }
     .site-info {
         font-family: 'Exo';
         font-weight: 300;
 
         @include tablet {
-            display: inline-flex;
+            display: flex;
+            flex-direction: column;
         }
 
         @include desktop {
             width: 100%;
+            flex-direction: row;
             display: inline-flex;
             justify-content: flex-end;
 
@@ -146,7 +199,7 @@ footer {
             margin-left: 5px;
 
             a {
-                color: #0c0;
+                color: $green;
                 text-decoration: none;
             }
 
@@ -154,6 +207,9 @@ footer {
                 padding-left: 5px;
                 margin: 0;
 
+            }
+            @include desktop{
+                margin-top: 5px;
             }
         }
 
@@ -164,14 +220,44 @@ footer {
             display: inline-flex;
 
             li a {
-                color: #0c0;
+                color: $green;
                 text-decoration: none;
                 margin: 5px;
                 padding-right: 15px;
                 border-right: 1px solid white;
 
                 &:hover {
-                    color: rgb(3, 173, 3);
+                    color: $green-hover;
+                }
+            }
+        }
+    }
+}
+
+//About Page
+.about {
+    font-family: 'Exo';
+    @include tablet{
+        width: 800px;
+    }
+    .entry-title {
+        font-weight: 300;
+        margin-left: 20px;
+        color: white;
+    }
+
+    .entry-content {
+        p {
+            padding: 10px 20px;
+            text-align: left;
+            font-size: 16px;
+
+            a {
+                text-decoration: none;
+                color: $green;
+
+                &:hover {
+                    color: $green-hover;
                 }
             }
         }
@@ -180,4 +266,84 @@ footer {
 
 /* All Archives Page */
 
+.archives{
+    width: 800px;
+    margin-bottom: 250px;
+    h1{
+        padding: 10px;
+        font-family: 'Exo';
+        color : white;
+        font-weight: 300;
+        font-size: 28px;
+    }
+    a{
+        float: left;
+        font-family: 'Exo';
+        padding: 5px;
+        font-weight: 300;
+        color : $green;
+        text-decoration: none;
+    }
+}
+//Category and tag
+.tag{
+    width: 800px;
+    .page-title{
+        font-family: 'Exo';
+        font-weight: 300;
+        color: white;
+        padding-bottom: 30px;
+        border-bottom: 1px dotted white;
+    }
+}
+.category{
+    width: 800px;
+    .page-title{
+        font-family: 'Exo';
+        font-weight: 300;
+        color: white;
+        padding-bottom: 30px;
+        border-bottom: 1px dotted white;
+    }
+.post{
+    padding-bottom: 40px;
+    border-bottom: 1px dotted white;
+}
+    @include desktop {
+        width: 800px;
+        position: relative;
+        &:before,
+        &:after {
+            color: $green;
+            font-family: 'FontAwesome';
+            font-size: 125px;
+            position: absolute;
+            top: 0;
+            overflow: hidden;
+            line-height: 125px;
+
+        }
+
+        &:before {
+            content: '\f10d';
+            left: -160px;
+        }
+
+        &:after {
+            content: '\f10e';
+            bottom: -20;
+            right: -160px;
+        }
+    }
+    div.entry-content::before{
+        display: none;
+    }
+    div.entry-content::after{
+        display: none;
+    }
+    .description p{
+        padding: 10px;
+        text-align: left;
+    }
+}
 /* Submit a Quote Page */

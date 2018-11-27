@@ -13,11 +13,9 @@
 				<div class="site-info">
 					
 						<div class="list-footer">
-						<ul class="footer-navigation">
-							<li><a href="#">About</a></li>
-							<li><a href="#">Archives</a></li>
-							<li><a href="#">Submit a Quote</a></li>
-						</ul>
+						<nav id="site-navigation" class="main-navigation" role="navigation">
+                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                </nav>
 						</div>
 						<div class="p-footer">
 						<p>Brought to you by <a href="https://github.com/PaulPetillot">Paul Petillot</a></p>
