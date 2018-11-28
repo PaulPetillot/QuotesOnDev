@@ -759,7 +759,7 @@ body {
           color: #03ad03; }
     @media (min-width: 1080px) {
       .about .entry-content {
-        padding: 10px 0px; } }
+        padding: 10px 5px; } }
 
 /* All Archives Page */
 .archives {
@@ -949,14 +949,17 @@ body {
         bottom: -20;
         right: -110px; } }
   .error-404 fieldset {
-    border: none; }
+    border: none;
+    display: inline; }
     .error-404 fieldset input {
       background-color: #222222;
       font-family: "Exo";
-      border: 2px solid #0c0; }
+      border: 2px solid #0c0;
+      margin-left: -12px; }
       .error-404 fieldset input:focus {
         color: white;
-        outline: none; }
+        outline: none;
+        border: 2px solid white; }
     .error-404 fieldset .search-submit {
       background-color: #222222;
       border: none;
