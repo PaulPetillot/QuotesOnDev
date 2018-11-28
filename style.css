@@ -418,6 +418,14 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=text]:focus,
+input[type=url]:focus,
+textarea:focus {
+  border-color: #fcfcd2; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -958,8 +966,7 @@ body {
       margin-left: -12px; }
       .error-404 fieldset input:focus {
         color: white;
-        outline: none;
-        border: 2px solid white; }
+        outline: none; }
     .error-404 fieldset .search-submit {
       background-color: #222222;
       border: none;

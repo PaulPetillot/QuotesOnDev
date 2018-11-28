@@ -19,7 +19,7 @@ Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Br
 
 ----
 ## Goals of the site
-This site has been created to learn how to create a theme by using Wordpress.
+This site has been created to learn how to create a theme by using Wordpress and how to use the Wordpress REST API.
 
 ----
 ## Technology used
@@ -34,7 +34,7 @@ Create plugins | change the dashboard and the login-menu | Use Wordpress functio
 
 1. Wordpress REST API and AJAX
 2. PHP
-3. Customize Wordpress by adding personnal plugins and widgets and by changing the Dashboard 
+3. Improve my Javascript Skills
 
 ----
 ## Link to the files on Github
